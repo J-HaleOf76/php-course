@@ -29,6 +29,19 @@ foreach($products as $key => $value){
   	echo "<p>".$key."</p>"; 
   }
 }
+$amount=800;
+$taxRate=0.0825;
+$addedTax= $amount*$taxRate;  //amount = 800, tax = .0825
+// echo $addedTax;
+
+
+function tax_calc($amount,$tax){
+    $calculate_tax = $amount*$tax;
+    $amount = round($amount+$calculate_tax,2);
+    return $amount;
+}
+echo tax_calc(750, 0.0223);
+
 
     ?>
     </body> 
